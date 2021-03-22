@@ -1,0 +1,21 @@
+.horned-beasts {
+  background-color: aquamarine;
+  width: 32%;
+  border: 3px solid black;
+}
+
+.horned-beasts h2 {
+  text-align: center;
+}
+
+.horned-beasts img {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  margin: auto;
+}
+
+.horned-beasts p {
+  text-align: center;
+  font-weight: bold;
+}

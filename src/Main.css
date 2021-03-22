@@ -1,0 +1,6 @@
+.main-section {
+  padding-top: 20px;
+  display: flex;
+  background-color: azure;
+  justify-content: space-between;
+}
