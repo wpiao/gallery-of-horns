@@ -1,17 +1,16 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts.js';
+import './Main.css';
 import data from './hornedBeastsData.js';
 
 class Main extends React.Component {
   render() {
-    console.log(data);
     return (
-      <div>
+      <main className="main-section">
         {data.map((beast, i) =>
           <HornedBeasts key={i} title={beast.keyword} src={beast.image_url} desc={beast.description} />
         )}
-        <HornedBeasts />
-      </div>
+      </main>
     );
   }
 }
