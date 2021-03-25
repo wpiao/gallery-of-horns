@@ -1,6 +1,6 @@
 .main-section {
+  text-align: center;
   padding-top: 20px;
-  display: flex;
+  margin: auto;
   background-color: azure;
-  justify-content: space-between;
 }
