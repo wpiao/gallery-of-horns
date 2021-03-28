@@ -1,14 +1,19 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts.js';
 import './Main.css';
-import data from './data.json';
 
 class Main extends React.Component {
   render() {
     return (
       <main className="main-section">
-        {data.map((beast, i) =>
-          <HornedBeasts key={i} title={beast.keyword} src={beast.image_url} desc={beast.description} />
+        {this.props.data.map((beast, i) =>
+          <HornedBeasts
+            key={i}
+            title={beast.title}
+            src={beast.image_url}
+            desc={beast.description}
+            handleClick={this.props.handleClick}
+          />
         )}
       </main>
     );

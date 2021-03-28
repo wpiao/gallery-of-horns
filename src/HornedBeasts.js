@@ -10,17 +10,24 @@ class HornedBeasts extends React.Component {
     };
   }
 
-  handleClick = () => {
+  handleClick = e => {
     this.setState({
       clicks: this.state.clicks + 1
     });
+    this.props.handleClick(e);
   }
 
   render() {
     return (
       <div className="horned-beasts">
         <h2>{this.props.title}</h2>
-        <Image onClick={this.handleClick} src={this.props.src} fluid alt={this.props.title} title={this.props.title} />
+        <Image
+          onClick={this.handleClick}
+          src={this.props.src}
+          alt={this.props.title}
+          title={this.props.title}
+          name={this.props.desc} fluid
+        />
         <p>{this.props.desc}</p>
         <p>&hearts; {this.state.clicks}</p>
       </div>
