@@ -5,16 +5,14 @@ import Main from './Main.js';
 import SelectedBeast from './SelectedBeast.js';
 import Footer from './Footer.js';
 import data from './data.json';
-import './App.css';
+import './css/App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       show: false,
-      src: '',
-      title: '',
-      desc: '',
+      selectedPic: {},
       data: data,
       input: '',
       showAllButton: 'none'
@@ -25,11 +23,9 @@ class App extends React.Component {
     this.setState({ show: false });
   }
 
-  handleClick = e => {
+  handleClick = pic => {
     this.setState({
-      src: e.target.src,
-      title: e.target.title,
-      desc: e.target.name,
+      selectedPic: pic,
       show: true
     });
   }
@@ -68,9 +64,7 @@ class App extends React.Component {
         <SelectedBeast
           handleClose={this.handleClose}
           show={this.state.show}
-          src={this.state.src}
-          title={this.state.title}
-          desc={this.state.desc}
+          pic={this.state.selectedPic}
         />
         <InputGroup className="mb-3">
           <FormControl
